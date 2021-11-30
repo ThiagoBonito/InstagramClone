@@ -1,0 +1,52 @@
+<div class="card" style="width: 20rem;">
+  <div class="card-body">
+    <div class="card-title"></div>
+    
+    <form [formGroup]="formulario" (ngSubmit)="cadastrarUsuario()">
+      <div class="form-group">
+        <input 
+          type="email" 
+          class="form-control" 
+          placeholder="E-mail"
+          formControlName="email"
+        >
+      </div>
+      <div class="form-group">
+        <input 
+          type="text"
+          class="form-control" 
+          placeholder="Nome completo"
+          formControlName="nome_completo"
+        >
+      </div>
+      <div class="form-group">
+        <input 
+          type="text"
+          class="form-control" 
+          placeholder="Nome de usuário"
+          formControlName="nome_usuario"
+        >
+      </div>
+      <div class="form-group">
+        <input 
+          type="password"
+          class="form-control" 
+          placeholder="Senha"
+          formControlName="senha"
+        >
+      </div>
+      <button type="submit" class="btn btn-primary btn-sm btn-block">Cadastre-se</button>
+    </form>
+
+    <p class="small text-center">Ao cadastrar-se, você concorda com nossos <b>Termos</b> e <b>Política de Privacidade</b>.</p>
+
+  </div>
+</div>
+<br />
+<div class="card" style="width: 20rem;">
+  <div class="card-body">
+    <p class="card-text">
+      Tem uma conta? <a href="#" (click)="exibirPainelLogin()" class="card-link">Faça login</a>
+    </p> 
+  </div>
+</div>

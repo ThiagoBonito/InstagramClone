@@ -1,0 +1,24 @@
+<div class="row" *ngFor="let publicacao of publicacoes">
+  <div class="col d-flex justify-content-center">
+    <div class="card">
+      <div class="card-body">
+        <p class="card-text"><strong>{{publicacao.nome_usuario}}</strong></p>
+      </div>
+
+      <img class="card-img" [src]="publicacao.url_imagem || ''" />
+      
+      <div class="card-body">
+        <p class="card-text">
+          <strong>{{publicacao.nome_usuario}}</strong> {{publicacao.titulo}}
+        </p>
+
+        <hr />
+        <input 
+          type="text" 
+          class="form-control comentario"
+          placeholder="Adicione um comentário..." 
+        />
+      </div>
+    </div>
+  </div>
+</div>
